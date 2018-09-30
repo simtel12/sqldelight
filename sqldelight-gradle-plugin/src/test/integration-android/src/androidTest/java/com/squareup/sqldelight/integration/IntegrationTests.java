@@ -25,7 +25,7 @@ public class IntegrationTests {
   private SqliteKeywordsQueries keywordsQueries;
 
   @Before public void before() {
-    database = new AndroidSqlDatabase(QueryWrapper.Helper, InstrumentationRegistry.getContext());
+    database = new AndroidSqlDatabase(QueryWrapper.Schema, InstrumentationRegistry.getContext());
     queryWrapper = new QueryWrapper(database);
     personQueries = queryWrapper.getPersonQueries();
     keywordsQueries = queryWrapper.getSqliteKeywordsQueries();
